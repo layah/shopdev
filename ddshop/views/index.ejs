@@ -2,25 +2,37 @@
 <html>
   <head>
     <title>管理系统登陆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel='stylesheet' href='/stylesheets/login/login.css' />
   </head>
   <body>
   	<div class="table">
   		<div class="tab-cell">
-  			<div class="form-content"> 
-  				
+  			<div class="form-content">
+                <form id="login">
+                    <div class="form-group">
+                        <div class="title">系统登录</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="用户名" tabindex="1" name="username">
+                        <div class="erro-tip"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="密码"  tabindex="2" name="password">
+                        <div class="erro-tip"></div>
+                    </div>
+                    <div class="form-group">
+                        <button class="loginBtn" type="submit">登录</button>
+                    </div>
+                    <div id="erro-false"></div>
+                </form>
   			</div>
   		</div>
   	</div>
+
   </body>
+  <%- include ./commont/script.ejs %>
   <script type="text/javascript" src="/js/bubbly-bg.js"></script>
-  <script type="text/javascript">
-	bubbly({
-			colorStart: "#fff4e6",
-			colorStop: "#ffe9e4",
-			blur: 1,
-			compose: "source-over",
-			bubbleFunc: () => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
-		});
-  </script>
+  <script type="text/javascript" src="/js/login/login.js"></script>
 </html>

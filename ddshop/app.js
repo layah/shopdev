@@ -3,8 +3,10 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
+var home = require('./routes/home');
 
 var app = express();
 var router=express.Router()
@@ -21,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/home',home);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
