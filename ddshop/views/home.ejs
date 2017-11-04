@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>控制台</title>
+    <link rel="stylesheet" href="/commont/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/commont/bootstrap-table/css/bootstrap-table.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/home/home.css' />
+    <link rel='stylesheet' href='/stylesheets/home/home-list.css' />
   </head>
   <body>
   	<div class="header">
@@ -11,22 +14,34 @@
       <span class="drodown">退出</span>
     </div>
     <div class="content">
-        <div class="left">
-          <ul>
-            <li><a href="javascript:;">一级菜单</a></li>
-          </ul>
-        </div>
-      <div class="right">
-          <div class="inline-top">
-              <from>
-                  <div class="form-group">
-                      <label for="">名称:</label>
-                      <input type="text" maxlength="20" name="">
+        <%- include ./commont/menu.ejs %>
+        <div class="right">
+          <div >
+              <div class="page-title row">
+                  <div class="col-lg-6">
+                      <span class="modular "><i></i><em>商品列表</em></span>
                   </div>
-              </from>
+                  <div class="col-lg-6">
+                      <span class="modular fr"><a href="edit_product.html" class="pt-link-btn">+添加商品</a></span>
+                  </div>
+              </div>
+              <div class="operate row">
+                 <div class="col-lg-12">
+                     <form>
+                         <input type="text" class="textBox length-long" placeholder="输入产品名称..."/>
+                         <input type="button" value="查询" class="tdBtn"/>
+                     </form>
+                 </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                    <table id="table-list"></table>
+                </div>
+              </div>
           </div>
       </div>
     </div>
   </body>
   <%- include ./commont/script.ejs %>
+  <script type="text/javascript" src="/js/home/home.js"></script>
 </html>

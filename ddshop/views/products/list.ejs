@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>商品列表</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/home/home.css' />
+  </head>
+  <body>
+  	<div class="header">
+      <span>控制台</span>
+      <span class="drodown">退出</span>
+    </div>
+    <div class="content">
+        <div class="left">
+          <ul class="menu">
+            <li>
+                <span>商品管理</span>
+                <ul class="child-list">
+                    <li><a href="/home/list">商品列表</a></li>
+                    <li><a href="/home/classes">商品分类</a></li>
+                </ul>
+            </li>
+              <li>
+                  <span>会员管理</span>
+                  <ul class="child-list">
+                      <li><a href="/home/viplist">会员列表</a></li>
+                      <li><a href="/home/addvip">添加会员</a></li>
+                  </ul>
+              </li>
+          </ul>
+        </div>
+      <div class="right">
+          <div class="inline-top">
+              <from>
+                  <div class="form-group">
+                      <label for="">名称:</label>
+                      <input type="text" maxlength="20" name="">
+                  </div>
+              </from>
+          </div>
+      </div>
+    </div>
+  </body>
+  <%- include ./commont/script.ejs %>
+</html>

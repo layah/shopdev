@@ -31,6 +31,7 @@ $(function () {
             $.post("/login",formDataObj,function (res) {
                 if (res.success){
                     window.location.href="/home"
+                    window.sessionStorage.setItem("check",res.success)
                 }
                 else{
                     $("#erro-false").text(res.message).fadeIn(2000,function () {

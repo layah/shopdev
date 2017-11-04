@@ -4,6 +4,9 @@ var router = express.Router();
 var pool=require("../servers/api")
 
 /* GET home page. */
+router.get("/",function (req,res,next) {
+    res.render("index")
+});
 router.post('/login', function(req, res, next) {
     var username=req.body.username;
     var password=req.body.password;

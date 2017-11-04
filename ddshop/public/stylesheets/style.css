@@ -13,7 +13,7 @@ blockquote{margin:0 0 1em 0}
 
 a{color:#14647d;text-decoration:none;font-family:tahoma,arial,\5b8b\4f53,sans-serif;_font-family:arial,sans-serif}
 
-a:hover{text-decoration:underline}
+a:hover{text-decoration:none!important;}
 
 img{display:block;border:0}
 
