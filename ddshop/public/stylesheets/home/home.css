@@ -1,6 +1,9 @@
 html,body{
 	height:100%;
 }
+input[type=text], textarea {
+	 border: 1px solid #ddd;
+}
 .fl{
 	float:left;
 }
@@ -89,4 +92,18 @@ html,body{
 	overflow: hidden;
 	text-overflow:ellipsis;
 	white-space: nowrap;
+}
+.modal-dialog {
+	position: relative;
+	margin:20px auto!important;
+}
+.modal-title{
+	font-size:22px;
+	font-weight:bold;
+}
+#addform>table>tbody>tr>td>span:first-child:after{
+    content:"*";
+    color:red;
+    display:inline-block;
+    vertical-align:middle;
 }

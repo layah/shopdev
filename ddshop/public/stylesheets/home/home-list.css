@@ -101,7 +101,7 @@
 .length-long{width:300px;}
 .length-middle{width:220px;}
 .length-short{width:60px;}
-.textarea{border:1px #999 solid;width:500px;height:180px;}
+.textarea{border:1px #999 solid;resize:none}
 .tdBtn{border:1px #999 solid;background:#f1f1f1;padding:5px 15px;border-radius:2px;cursor:pointer;}
 .tdBtn:hover{background:#e8e8e8;}
 /* fallback placeholder */
